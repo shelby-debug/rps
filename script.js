@@ -2,6 +2,8 @@ let r = "Rock";
 let p = "Paper";
 let s = "Scissors";
 let choice = Math.random();
+const computerSelection = getComputerChoice
+let playerSelection = "Rock"
 
 function getComputerChoice(choice) {
   return choice}
@@ -15,3 +17,7 @@ function getComputerChoice(choice) {
   }
   else {
     alert (p)}
+
+
+function singleRound (playerSelection, computerSelection){
+   return winner}

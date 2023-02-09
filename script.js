@@ -14,4 +14,4 @@ function getComputerChoice(choice) {
     alert (s)
   }
   else {
-    alert (s)}
+    alert (p)}

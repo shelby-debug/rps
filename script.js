@@ -3,7 +3,6 @@ let p = "Paper";
 let s = "Scissors";
 let choice = Math.random();
 const computerSelection = getComputerChoice
-let playerSelection = "Rock"
 
 function getComputerChoice(choice) {
   return choice}
@@ -18,6 +17,9 @@ function getComputerChoice(choice) {
   else {
     alert (p)}
 
+    
+let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
 
 function singleRound (playerSelection, computerSelection){
    return winner}
+   console.log(playerSelection)

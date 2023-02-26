@@ -27,17 +27,13 @@ function getComputerChoice(choice) {
 
 
 let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
-// I don't think that the variables below are being used?
+
 
 console.log(playerSelection)
 
-// Similar to the above, this function only spans the following two lines because
-// of the closing `}` after `winner`. I would expect this to error out, since it
-// does not look like `winner` is being defined anywhere?
-
 
 function singleRound (playerSelection, computerSelection){
-   return winner}
+   
   
     if ((playerSelection == r && computerSelection > .666) || (playerSelection == p && computerSelection < .333) || (playerSelection == s && (computerSelection > .33 && computerSelection < .666) )) {
      alert ("You win!!!")}
@@ -56,10 +52,10 @@ function singleRound (playerSelection, computerSelection){
  function game() {
   let computerchoice = Math.random();
   let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
-  for (let i = 0; i < 5; i++);
+  
   singleRound()
  }
-  
+  for (let singleRound = 0; singleRound < 5; singleRound++)
 game()
 console.log(game)
 
@@ -70,7 +66,3 @@ console.log(game)
 // expect that it would generate it's random selection and _return_ the appropriate choice,
 // either as a string like "rock" or a numeric value `.1` like you are above.
 
-// I'd recommend trying to break your functions out so that it is clear what they
-// are responsible for - for example if you have a function for "get computer choice", I'd
-// expect that it would generate it's random selection and _return_ the appropriate choice,
-// either as a string like "rock" or a numeric value `.1` like you are above.

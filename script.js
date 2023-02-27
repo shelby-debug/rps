@@ -3,42 +3,37 @@
 // Importantly, that means that when you call `choice` later in this file, it will
 // only ever surface the value that was returned the first time.
 
-let r = "rock";
-let p = "paper";
-let s = "scissors";
+let r = "rock"
+let p = "paper"
+let s = "scissors"
 
 
    
 function game() {
   let choice = Math.random()
+  let computerSelection = choice
   let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
+  
   singleRound()
+  getComputerChoice()
 console.log(choice)}
  
   for (let singleRound = 0; singleRound < 5; singleRound++)
   
 game()
-console.log(game)
-console.log(choice)
 
-const computerSelection =  choice
+
 function getComputerChoice(choice) {
 
   if (choice < .333) {
-    alert (r)}
+    return (r)}
 
   else if (choice > .666) {
-    alert (s)
+    return (s)
   }
   else {
-    alert (p)}
-  }
-  console.log(computerSelection)
-
-
-
-
-console.log(playerSelection)
+    return (p)}
+console.log(getComputerChoice)}
 
 
 function singleRound (playerSelection, computerSelection){
@@ -54,7 +49,7 @@ function singleRound (playerSelection, computerSelection){
      alert ("It's a tie!")
 
     }}
-  console.log(computerSelection)
+  
 
 
 

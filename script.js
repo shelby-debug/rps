@@ -2,18 +2,25 @@
 // NOTE: These variables are being defined a single time when this file is executed.
 // Importantly, that means that when you call `choice` later in this file, it will
 // only ever surface the value that was returned the first time.
-// NOTE: These variables are being defined a single time when this file is executed.
-// Importantly, that means that when you call `choice` later in this file, it will
-// only ever surface the value that was returned the first time.
 let choice = Math.random();
 let r = "rock";
 let p = "paper";
 let s = "scissors";
 
-const computerSelection = choice
 
-function getComputerChoice(choice) {
-  console.log (choice)
+   
+function game() {
+  let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
+  singleRound()
+console.log(choice)}
+ 
+  for (let singleRound = 0; singleRound < 5; singleRound++)
+  
+game()
+console.log(game)
+console.log(choice)
+
+const computerSelection = function getComputerChoice(choice) {
 
   if (choice < .333) {
     alert (r)}
@@ -24,6 +31,7 @@ function getComputerChoice(choice) {
   else {
     alert (p)}
   }
+  console.log(computerSelection)
 
 
 let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
@@ -48,16 +56,7 @@ function singleRound (playerSelection, computerSelection){
   console.log(computerSelection)
 
 
-   
- function game() {
-  let computerchoice = Math.random();
-  let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
-  
-  singleRound()
- }
-  for (let singleRound = 0; singleRound < 5; singleRound++)
-game()
-console.log(game)
+
 
   
 

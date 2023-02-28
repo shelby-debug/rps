@@ -1,8 +1,3 @@
-
-// NOTE: These variables are being defined a single time when this file is executed.
-// Importantly, that means that when you call `choice` later in this file, it will
-// only ever surface the value that was returned the first time.
-
 let r = "rock"
 let p = "paper"
 let s = "scissors"
@@ -14,14 +9,30 @@ function game() {
   let computerSelection = choice
   let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
   
-  singleRound()
+  singleRound(playerSelection, computerSelection)
   getComputerChoice()
-console.log(choice)}
+console.log(choice)
+console.log(playerSelection)
+console.log(computerSelection)}
  
   for (let singleRound = 0; singleRound < 5; singleRound++)
   
 game()
 
+function singleRound (playerSelection, computerSelection){
+  console.log(playerSelection)
+  console.log(computerSelection)
+ 
+   if ((playerSelection == r && computerSelection > .666) || (playerSelection == p && computerSelection < .333) || (playerSelection == s && (computerSelection > .33 && computerSelection < .666) )) {
+    alert ("You win!!!")}
+  
+   else if ((playerSelection == s && computerSelection < .333 ) || (playerSelection == r && (computerSelection >.33 && computerSelection <.666)) || (playerSelection == p && computerSelection > .666) ) {
+    alert ("You lose. Better luck next time.")}
+
+   else {
+    alert ("It's a tie!")
+
+   }}
 
 function getComputerChoice(choice) {
 
@@ -36,19 +47,7 @@ function getComputerChoice(choice) {
 console.log(getComputerChoice)}
 
 
-function singleRound (playerSelection, computerSelection){
-   
-  
-    if ((playerSelection == r && computerSelection > .666) || (playerSelection == p && computerSelection < .333) || (playerSelection == s && (computerSelection > .33 && computerSelection < .666) )) {
-     alert ("You win!!!")}
-   
-    else if ((playerSelection == s && computerSelection < .333 ) || (playerSelection == r && (computerSelection >.33 && computerSelection <.666)) || (playerSelection == p && computerSelection > .666) ) {
-     alert ("You lose. Better luck next time.")}
 
-    else {
-     alert ("It's a tie!")
-
-    }}
   
 
 

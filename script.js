@@ -1,13 +1,15 @@
 let r = "rock"
 let p = "paper"
 let s = "scissors"
-
+let playerScore= 0
+let computerScore= 0
 
    
 function game() {
   let choice = Math.random()
   let computerSelection = choice
   let playerSelection = (prompt ("Rock, Paper, or Scissors?")).toLowerCase()
+  let playRound = singleRound
   
   singleRound(playerSelection, computerSelection)
   getComputerChoice()
@@ -15,24 +17,40 @@ console.log(choice)
 console.log(playerSelection)
 console.log(computerSelection)}
  
-  for (let singleRound = 0; singleRound < 5; singleRound++)
+  for (let playRound = 0; playRound < 5; playRound++){ 
+    game()
+    console.log(playerScore)
+    console.log(computerScore)
+   }
   
-game()
+function Score(){
+  if ((playerScore >= 3) && (playRound=5)) {alert ("You won the game!")}
+  else if (computerScore >=3 && (playRound=5)) {alert ("You lose the game.")}
+  else{
+    alert ("Nobody wins. Try again!")
+  }
+}
+Score()
 
 function singleRound (playerSelection, computerSelection){
   console.log(playerSelection)
   console.log(computerSelection)
+  let playerWin = "You win!"
+  let computerWin = "You lose!"
+  let tie = "It's a tie."
  
    if ((playerSelection == r && computerSelection > .666) || (playerSelection == p && computerSelection < .333) || (playerSelection == s && (computerSelection > .33 && computerSelection < .666) )) {
-    alert ("You win!!!")}
+    playerScore++;
+    alert (playerWin)}
   
    else if ((playerSelection == s && computerSelection < .333 ) || (playerSelection == r && (computerSelection >.33 && computerSelection <.666)) || (playerSelection == p && computerSelection > .666) ) {
-    alert ("You lose. Better luck next time.")}
+    computerScore++;
+    alert (computerWin)}
 
    else {
-    alert ("It's a tie!")
+    alert (tie)
 
-   }}
+   console.log(playerScore)}}
 
 function getComputerChoice(choice) {
 
